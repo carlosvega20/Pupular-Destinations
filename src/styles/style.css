@@ -1,0 +1,11 @@
+/* divide it into three columns */
+.columns {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -ms-column-count: 3;
+    -ms-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>Popular Destinations</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <script src="libs/Angular/angular.js"></script>
+    <script src="src/js/script.js"></script>
+    <!--css3-multi-column cross­browser solution-->
+    <!--[if lt IE 10]>
+      <script src="css3Columns/css3-multi-column.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h2>Popular Destinations</h2>
+    <div ng-controller="PDCtrl">
+      <ul class="columns">
+        <!-- Sort and present the list alphabetically -->
+        <li ng-repeat="destination in destinations | orderBy:'name'">
+          <a href="" ng-click="select(destination)">{{destination.name}}</a><span> ({{destination.count}})</span>
+        </li>
+      </ul>
+      <!-- displays some additional information of cicked city -->
+      <div ng-bind-html="content"></div>
+    </div>
+  </body>
+</html>
